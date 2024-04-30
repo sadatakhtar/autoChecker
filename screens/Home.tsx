@@ -1,23 +1,40 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { UseSelector, useSelector } from 'react-redux'
-import { getTest } from '../src/features/general/generalSlice'
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import StandardHeader from '../components/StandardHeader';
 
+interface HomeProps {
 
-type Props = {}
-
-const Home = (props: Props) => {
-    const testRedux = useSelector(getTest);
-  return (
-    <View>
-      <Text>Home</Text>
-      <View>
-        <Text style={{fontSize: 20, color: 'red'}}>{testRedux}</Text>
-      </View>
-    </View>
-  )
 }
 
-export default Home
+const Home = () => {
+  
+  return (
+    <View style={styles.container}>
+      <StandardHeader />
+      <View style={styles.textWrapper}>
+        <Text style={styles.text}>
+          Welcome to AutoChecker, enter a vehicle registration to get a list of
+          possible defects or issues which can surface in the near future.
+        </Text>
+      </View>
 
-const styles = StyleSheet.create({})
+      
+    </View>
+  );
+};
+
+export default Home;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    //padding: 10,
+  },
+  text: {
+    fontSize: 18,
+  },
+  textWrapper: {
+    padding: 10,
+    marginVertical: 20
+  }
+});
