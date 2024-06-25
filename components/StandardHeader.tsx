@@ -4,7 +4,7 @@ import {colours} from '../assets/SharedStyles';
 
 interface StandardHeaderProps {}
 
-const StandardHeader = () => {
+const StandardHeader = ({}: StandardHeaderProps) => {
   return (
     <View style={styles.container}>
       <View>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: colours.$pale_blue,
-    height: 70
+    height: 70,
   },
   text: {
     fontSize: 30,
