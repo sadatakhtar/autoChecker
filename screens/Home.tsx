@@ -2,10 +2,20 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import StandardHeader from '../components/StandardHeader';
 import Btn from '../components/Btn';
+import {useNavigation} from '@react-navigation/native';
 
 interface HomeProps {}
+interface NavProps {
+  navigate: (arg0: string) => void;
+}
 
-const Home = () => {
+const Home = ({}: HomeProps) => {
+  const navigation: NavProps = useNavigation();
+
+  const handleBtn = () => {
+    console.log('btn pressed');
+    navigation.navigate('Dashboard');
+  };
   return (
     <View style={styles.container}>
       <StandardHeader />
@@ -17,7 +27,7 @@ const Home = () => {
           </Text>
         </View>
         <View>
-          <Btn title="Next" onPress={() => {}} style={{ marginTop: 500}}/>
+          <Btn title="Next" onPress={handleBtn} style={{marginTop: 500}} />
         </View>
       </View>
     </View>

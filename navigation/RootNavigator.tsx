@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
+import DashboardScreen from '../screens/DashboardScreen';
 
 type Props = {};
 
@@ -14,6 +15,11 @@ const RootNavigator = (props: Props) => {
       <Stack.Screen
         name="Home"
         component={Home}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="Dashboard"
+        component={DashboardScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
