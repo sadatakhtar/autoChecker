@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   btnContainer: {
-    marginTop: 250,
+    marginTop: 50,
   },
   inputWrapper: {
     borderWidth: 1,
