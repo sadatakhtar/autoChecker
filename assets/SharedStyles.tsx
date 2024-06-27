@@ -7,5 +7,8 @@ export const colours = {
     $blue: '#0360a6',
     $bright_blue: '#4c93ff',
     $light_blue: '#3b7dc5',
-    $pale_blue: '#99ccff'
+    $pale_blue: '#99ccff',
+
+    $red: '#ff0000',
+    $white: '#ffffff',
 }

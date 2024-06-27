@@ -5,14 +5,15 @@ import { colours } from '../assets/SharedStyles';
 interface BtnProps {
   title: string;
   style?: object;
+  textStyles?: object;
   onPress: () => void;
 }
 
-const Btn = ({title, style, onPress}: BtnProps) => {
+const Btn = ({title, style, textStyles, onPress}: BtnProps) => {
   return (
     <Pressable onPress={onPress}>
       <View style={[styles.container, style]}>
-        <Text style={styles.text}>{title}</Text>
+        <Text style={[styles.text, textStyles]}>{title}</Text>
       </View>
     </Pressable>
   );

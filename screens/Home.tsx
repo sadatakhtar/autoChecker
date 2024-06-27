@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import StandardHeader from '../components/StandardHeader';
 import Btn from '../components/Btn';
 import {useNavigation} from '@react-navigation/native';
+import Paragraph from '../components/Paragraph';
 
 interface HomeProps {}
 interface NavProps {
@@ -20,14 +21,30 @@ const Home = ({}: HomeProps) => {
     <View style={styles.container}>
       <StandardHeader />
       <View style={styles.body}>
+        <Paragraph
+          summary="Welcome to AutoChecker, your ultimate companion for stress-free car
+        buying! Are you a first-time car buyer feeling overwhelmed by the
+        uncertainties of purchasing a vehicle? Or perhaps you're a cautious
+        shopper who wants to ensure you're making a wise investment? Look no
+        further!"
+        />
+        <Paragraph
+          summary="AutoChecker is designed with you in mind. 
+        Our goal is to empower you with 
+        knowledge, helping you make informed decisions and avoid unexpected 
+        surprises down the road."
+        />
+        <Paragraph
+          summary="Say goodbye to buyer's remorse and hello to 
+        confidence with AutoChecker. Start your journey towards a 
+        worry-free car buying experience today!"
+        />
         <View>
-          <Text style={styles.text}>
-            Welcome to AutoChecker, enter a vehicle registration to get a list
-            of possible defects or issues which can surface in the near future.
-          </Text>
-        </View>
-        <View>
-          <Btn title="Next" onPress={handleBtn} style={{marginTop: 500}} />
+          <Btn
+            title="Click to proceed"
+            onPress={handleBtn}
+            style={{marginTop: 20}}
+          />
         </View>
       </View>
     </View>
