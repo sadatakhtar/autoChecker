@@ -7,14 +7,15 @@ import {useNavigation} from '@react-navigation/native';
 import {colours} from '../assets/SharedStyles';
 import Paragraph from '../components/Paragraph';
 import axios from 'axios';
+import {setData} from '../src/features/general/generalSlice';
+import {useDispatch} from 'react-redux';
 
-interface DashboardScreenProps {
-  // Define your props here
-}
+interface DashboardScreenProps {}
 
 const DashboardScreen = ({}: DashboardScreenProps) => {
   const [vehicleRegistration, setVehicleRegistration] = useState('');
-  const navigation = useNavigation();
+  const navigation: any = useNavigation();
+  const dispatch = useDispatch();
 
   const handleBackBtn = () => {
     console.log('Back button pressed');
@@ -24,8 +25,6 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
   const handleSubmit = async () => {
     console.log('Vehicle Registration Submitted:', vehicleRegistration);
     const apiUrl = process.env.REACT_APP_API_URL ?? '';
-    console.log('process.env.REACT_APP_API_URL ----------------> ', process.env.REACT_APP_API_URL )
-    console.log('process.env.REACT_APP_API_KEY ----------------> ', process.env.REACT_APP_API_KEY)
     const data = {
       registrationNumber: vehicleRegistration,
     };
@@ -39,13 +38,18 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
     try {
       const response = await axios.post(apiUrl, data, config);
       console.log('API Response:', response.data);
-      // TODO: navigate to next screen and pass the response data or store response in redux
+      dispatch(setData(response.data));
+      navigation.navigate('Search Result');
     } catch (error) {
       console.error('API Call Failed:', error);
-      // TODO: Handle error (e.g., show an error message to the user)
+      // TODO: Handle error add Alert
     }
   };
 
+  const handleCancel = () => {
+    console.log('Cancel button pressed');
+    setVehicleRegistration('');
+  };
   return (
     <View style={styles.container}>
       <StandardHeader />
@@ -75,7 +79,7 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
           />
           <Btn
             title="Cancel"
-            onPress={handleSubmit}
+            onPress={handleCancel}
             style={{width: 100, backgroundColor: colours.$red, height: 40}}
             textStyles={{color: colours.$white, fontSize: 14}}
           />

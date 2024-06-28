@@ -4,6 +4,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import DashboardScreen from '../screens/DashboardScreen';
+import SearchResultScreen from '../screens/SearchResultScreen';
 
 type Props = {};
 
@@ -20,6 +21,11 @@ const RootNavigator = (props: Props) => {
        <Stack.Screen
         name="Dashboard"
         component={DashboardScreen}
+        options={{headerShown: false}}
+      />
+         <Stack.Screen
+        name="Search Result"
+        component={SearchResultScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

@@ -1,0 +1,18 @@
+{
+  "co2Emissions": 142,
+  "colour": "GREEN",
+  "dateOfLastV5CIssued": "2019-05-21",
+  "engineCapacity": 1198,
+  "fuelType": "PETROL",
+  "make": "VOLKSWAGEN",
+  "markedForExport": false,
+  "monthOfFirstRegistration": "2005-02",
+  "motExpiryDate": "2025-06-04",
+  "motStatus": "Valid",
+  "registrationNumber": "SE54HYK",
+  "taxDueDate": "2024-12-01",
+  "taxStatus": "Taxed",
+  "typeApproval": "M1",
+  "wheelplan": "2 AXLE RIGID BODY",
+  "yearOfManufacture": 2005
+}
