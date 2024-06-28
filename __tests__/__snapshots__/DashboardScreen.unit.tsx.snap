@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard Snapshot Test renders correctly 1`] = `
+<View
+  style={{}}
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#99ccff",
+        "borderColor": "#1f446d",
+        "borderWidth": 2,
+        "flexDirection": "row",
+        "height": 70,
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <View>
+      <Text>
+        LOGO
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          {
+            "fontSize": 30,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Auto
+        <Text
+          style={
+            {
+              "color": "#4c93ff",
+            }
+          }
+        >
+          C
+        </Text>
+        hecker
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "padding": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#1f1f1f",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Dashboard
+    </Text>
+  </View>
+  <View
+    style={
+      {
+        "borderColor": "#0360a6",
+        "borderRadius": 5,
+        "borderWidth": 1,
+        "margin": 20,
+        "padding": 20,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "marginVertical": 6,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 18,
+          }
+        }
+      >
+        Simply enter the vehicle registration number, and let our powerful  algorithms do the rest. Within seconds, you'll receive a  comprehensive list of potential issues or current defects associated with the car you're interested in.
+      </Text>
+    </View>
+    <Text
+      style={
+        {
+          "color": "#1f1f1f",
+          "fontWeight": "bold",
+          "padding": 10,
+        }
+      }
+    >
+      Enter Vehicle Registration
+    </Text>
+    <TextInput
+      onChangeText={[Function]}
+      placeholder="Registration..."
+      style={
+        {
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 12,
+          "padding": 10,
+        }
+      }
+      value=""
+    />
+    <View
+      style={
+        {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "backgroundColor": "#99ccff",
+                "borderColor": "#1f1f1f",
+                "borderRadius": 5,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "margin": 10,
+                "padding": 10,
+              },
+              {
+                "height": 40,
+                "width": 150,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#1f1f1f",
+                  "fontSize": 20,
+                  "fontWeight": "condensedBold",
+                },
+                {
+                  "fontSize": 14,
+                },
+              ]
+            }
+          >
+            Submit
+          </Text>
+        </View>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "backgroundColor": "#99ccff",
+                "borderColor": "#1f1f1f",
+                "borderRadius": 5,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "margin": 10,
+                "padding": 10,
+              },
+              {
+                "backgroundColor": "#ff0000",
+                "height": 40,
+                "width": 100,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#1f1f1f",
+                  "fontSize": 20,
+                  "fontWeight": "condensedBold",
+                },
+                {
+                  "color": "#ffffff",
+                  "fontSize": 14,
+                },
+              ]
+            }
+          >
+            Cancel
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#99ccff",
+              "borderColor": "#1f1f1f",
+              "borderRadius": 5,
+              "borderWidth": 2,
+              "justifyContent": "center",
+              "margin": 10,
+              "padding": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "color": "#1f1f1f",
+                "fontSize": 20,
+                "fontWeight": "condensedBold",
+              },
+              undefined,
+            ]
+          }
+        >
+          Back
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

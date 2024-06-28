@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import Btn from '../components/Btn'; // Adjust the import path according to your project structure
+import Btn from '../../components/Btn'; // Adjust the import path according to your project structure
 
 describe('Btn Component Tests', () => {
   const onPressMock = jest.fn();

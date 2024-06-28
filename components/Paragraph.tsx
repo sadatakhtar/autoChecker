@@ -2,7 +2,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 type Props = {
-  summary: string;
+  summary?: string;
 };
 
 const Paragraph = ({summary}: Props) => {

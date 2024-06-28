@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home screen Snapshot Test renders correctly 1`] = `
+<View
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#99ccff",
+        "borderColor": "#1f446d",
+        "borderWidth": 2,
+        "flexDirection": "row",
+        "height": 70,
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <View>
+      <Text>
+        LOGO
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          {
+            "fontSize": 30,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        Auto
+        <Text
+          style={
+            {
+              "color": "#4c93ff",
+            }
+          }
+        >
+          C
+        </Text>
+        hecker
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "marginVertical": 20,
+        "padding": 10,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "marginVertical": 6,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 18,
+          }
+        }
+      >
+        Welcome to AutoChecker, your ultimate companion for stress-free car buying! Are you a first-time car buyer feeling overwhelmed by the uncertainties of purchasing a vehicle? Or perhaps you're a cautious shopper who wants to ensure you're making a wise investment? Look no further!
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginVertical": 6,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 18,
+          }
+        }
+      >
+        AutoChecker is designed with you in mind.  Our goal is to empower you with  knowledge, helping you make informed decisions and avoid unexpected  surprises down the road.
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginVertical": 6,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontSize": 18,
+          }
+        }
+      >
+        Say goodbye to buyer's remorse and hello to  confidence with AutoChecker. Start your journey towards a  worry-free car buying experience today!
+      </Text>
+    </View>
+    <View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          style={
+            [
+              {
+                "alignItems": "center",
+                "backgroundColor": "#99ccff",
+                "borderColor": "#1f1f1f",
+                "borderRadius": 5,
+                "borderWidth": 2,
+                "justifyContent": "center",
+                "margin": 10,
+                "padding": 10,
+              },
+              {
+                "marginTop": 20,
+              },
+            ]
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "color": "#1f1f1f",
+                  "fontSize": 20,
+                  "fontWeight": "condensedBold",
+                },
+                undefined,
+              ]
+            }
+          >
+            Click to proceed
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
