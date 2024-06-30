@@ -19,26 +19,28 @@ const SearchResultScreen = ({}: SearchResultProps) => {
   return (
     <View>
       <StandardHeader />
-      <Text>Details</Text>
 
-      <View style={{
-        borderWidth: 4, 
-        borderColor: colours.$black,
-        borderRadius: 6,
-        backgroundColor: colours.$yellow,
-        padding: 10,
-        paddingVertical: 10,
-        margin: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
+      <View
+        style={{
+          borderWidth: 4,
+          borderColor: colours.$black,
+          borderRadius: 6,
+          backgroundColor: colours.$yellow,
+          padding: 10,
+          paddingVertical: 10,
+          margin: 20,
+          marginTop: 40,
+          justifyContent: 'center',
+          alignItems: 'center',
         }}>
-        <Text style={{
-          fontSize: 35, 
-          color: colours.$black,
-          fontWeight: 'bold',
-         
-          
-        }}>{data.registrationNumber}</Text>
+        <Text
+          style={{
+            fontSize: 35,
+            color: colours.$black,
+            fontWeight: 'bold',
+          }}>
+          {data.registrationNumber}
+        </Text>
       </View>
 
       <View>
