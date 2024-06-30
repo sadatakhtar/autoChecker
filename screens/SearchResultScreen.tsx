@@ -4,7 +4,8 @@ import {getData} from '../src/features/general/generalSlice';
 import {useSelector} from 'react-redux';
 import Btn from '../components/Btn';
 import {useNavigation} from '@react-navigation/native';
-import { colours } from '../assets/SharedStyles';
+import {colours} from '../assets/SharedStyles';
+import StandardHeader from '../components/StandardHeader';
 
 interface SearchResultProps {}
 
@@ -17,9 +18,31 @@ const SearchResultScreen = ({}: SearchResultProps) => {
   };
   return (
     <View>
-      <Text>SearchResultScreen</Text>
+      <StandardHeader />
+      <Text>Details</Text>
+
+      <View style={{
+        borderWidth: 4, 
+        borderColor: colours.$black,
+        borderRadius: 6,
+        backgroundColor: colours.$yellow,
+        padding: 10,
+        paddingVertical: 10,
+        margin: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        }}>
+        <Text style={{
+          fontSize: 35, 
+          color: colours.$black,
+          fontWeight: 'bold',
+         
+          
+        }}>{data.registrationNumber}</Text>
+      </View>
+
       <View>
-        <Text style={{fontSize: 20, color: colours.$red}}>{JSON.stringify(data)}</Text>
+        {/* <Text style={{fontSize: 20, color: colours.$red}}>{JSON.stringify(data)}</Text> */}
       </View>
       <View>
         <Btn title="Back" onPress={handleBtn} />

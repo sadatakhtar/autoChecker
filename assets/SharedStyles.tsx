@@ -11,4 +11,6 @@ export const colours = {
 
     $red: '#ff0000',
     $white: '#ffffff',
+
+    $yellow: '#f2b60d'
 }
