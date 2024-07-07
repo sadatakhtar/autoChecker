@@ -39,7 +39,10 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
       const response = await axios.post(apiUrl, data, config);
       console.log('API Response:', response.data);
       dispatch(setData(response.data));
-      navigation.navigate('Search Result');
+      navigation.navigate('Search Result', {
+        registrationNumber: vehicleRegistration,
+      
+      });
     } catch (error) {
       console.error('API Call Failed:', error);
       // TODO: Handle error add Alert

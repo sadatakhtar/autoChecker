@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import DashboardScreen from '../screens/DashboardScreen';
 import SearchResultScreen from '../screens/SearchResultScreen';
+import DefectsScreen from '../screens/DefectsScreen';
 
 type Props = {};
 
@@ -26,6 +27,11 @@ const RootNavigator = (props: Props) => {
          <Stack.Screen
         name="Search Result"
         component={SearchResultScreen}
+        options={{headerShown: false}}
+      />
+         <Stack.Screen
+        name="Defects"
+        component={DefectsScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

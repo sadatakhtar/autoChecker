@@ -8,9 +8,14 @@ export const colours = {
     $bright_blue: '#4c93ff',
     $light_blue: '#3b7dc5',
     $pale_blue: '#99ccff',
+    $strong_blue: '#0000FF',
 
     $red: '#ff0000',
     $white: '#ffffff',
 
-    $yellow: '#f2b60d'
+    $yellow: '#f2b60d',
+    $bright_yellow: '#ff0',
+
+    $light_green: '#33cc47',
+    $bright_green: '#67f50a',
 }

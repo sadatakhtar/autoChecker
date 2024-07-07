@@ -15,7 +15,8 @@ export const generalSlice = createSlice({
         },
         setData: (state, action )=> {
             state.data = action.payload;
-        }
+        }, 
+     
     }
 })
 

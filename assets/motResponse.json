@@ -1,0 +1,429 @@
+{
+  "registration": "SE54HYK",
+  "make": "VOLKSWAGEN",
+  "model": "POLO",
+  "firstUsedDate": "2005-02-10",
+  "fuelType": "Petrol",
+  "primaryColour": "Green",
+  "registrationDate": "2005-02-10",
+  "manufactureDate": "2005-02-10",
+  "engineSize": "1198",
+  "hasOutstandingRecall": "Unknown",
+  "motTests": [
+    {
+      "motTestNumber": "540428956052",
+      "completedDate": "2024-06-05T12:22:59.000Z",
+      "expiryDate": "2025-06-04",
+      "odometerValue": "94847",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Offside Front Drive shaft joint constant velocity boot severely deteriorated (6.1.7 (g) (i))",
+          "type": "MINOR"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Track rod end ball joint dust cover damaged or  deteriorated, but preventing the ingress of dirt (2.1.3 (g) (i))",
+          "type": "MINOR"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Track rod end ball joint dust cover damaged or  deteriorated, but preventing the ingress of dirt (2.1.3 (g) (i))",
+          "type": "MINOR"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "762125696705",
+      "completedDate": "2023-06-03T13:14:22.000Z",
+      "expiryDate": "2024-06-03",
+      "odometerValue": "93094",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Front Brake pad(s) wearing thin (1.1.13 (a) (ii))",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "842927712525",
+      "completedDate": "2022-06-04T12:39:25.000Z",
+      "expiryDate": "2023-06-03",
+      "odometerValue": "91129",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "208798142250",
+      "completedDate": "2021-06-03T12:38:30.000Z",
+      "expiryDate": "2022-06-02",
+      "odometerValue": "89701",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "713436465278",
+      "completedDate": "2019-08-13T12:36:06.000Z",
+      "expiryDate": "2020-08-12",
+      "odometerValue": "85966",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "892758495153",
+      "completedDate": "2018-08-13T07:51:01.000Z",
+      "expiryDate": "2019-08-12",
+      "odometerValue": "81464",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Rear Child Seat fitted not allowing full inspection of adult belt",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Central Front Exhaust has a minor leak of exhaust gases Flexi section deteriorated (6.1.2 (a))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Rear Exhaust back box corroded",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Outer CV Boot seeping grease, still secure and preventing ingress of dirt",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Rear Tyre slightly damaged/cracking or perishing Tyre perished, has X2 repairs and also has nail in tread near the edge of the tyre. (5.2.3 (d) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Rear Tyre slightly damaged/cracking or perishing (5.2.3 (d) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Lower Suspension arm pin or bush worn but not resulting in excessive movement Lower arm, rear bush starting to deteriorate. (5.3.4 (a) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Lower Suspension arm pin or bush worn but not resulting in excessive movement Lower arm, rear bush starting to deteriorate. (5.3.4 (a) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Rear Service brake fluctuating, but not excessively (1.2.1 (e))",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "303278777626",
+      "completedDate": "2018-08-10T13:07:11.000Z",
+      "expiryDate": null,
+      "odometerValue": "81436",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "FAILED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Front Windscreen wiper does not clear the windscreen effectively  O/S also starting to smear (3.4 (b) (ii))",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Rear Child Seat fitted not allowing full inspection of adult belt",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Central Front Exhaust has a minor leak of exhaust gases Flexi section deteriorated (6.1.2 (a))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Rear Exhaust back box corroded",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Outer CV Boot seeping grease, still secure and preventing ingress of dirt",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": true,
+          "text": "Nearside Front Tyre tread depth below requirements of 1.6mm Tyre is also badly perished/deteriorated (5.2.3 (e))",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": true,
+          "text": "Offside Front Tyre tread depth below requirements of 1.6mm Tyre is also badly perished/deteriorated (5.2.3 (e))",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Upper Anti-roll bar linkage ball joint dust cover no longer prevents the ingress of dirt (5.3.4 (b) (ii))",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Rear Tyre slightly damaged/cracking or perishing Tyre perished, has X2 repairs and also has nail in tread near the edge of the tyre. (5.2.3 (d) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Rear Tyre slightly damaged/cracking or perishing (5.2.3 (d) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Lower Suspension arm pin or bush worn but not resulting in excessive movement Lower arm, rear bush starting to deteriorate. (5.3.4 (a) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Lower Suspension arm pin or bush worn but not resulting in excessive movement Lower arm, rear bush starting to deteriorate. (5.3.4 (a) (i))",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Rear Service brake fluctuating, but not excessively (1.2.1 (e))",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "850974144886",
+      "completedDate": "2017-08-03T08:34:46.000Z",
+      "expiryDate": "2018-08-05",
+      "odometerValue": "76885",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "182782690580",
+      "completedDate": "2016-07-30T10:32:18.000Z",
+      "expiryDate": "2017-08-05",
+      "odometerValue": "72528",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "907451395159",
+      "completedDate": "2015-07-10T09:44:55.000Z",
+      "expiryDate": "2016-08-05",
+      "odometerValue": "68204",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Front Anti-roll bar ball joint dust cover deteriorated, but preventing the ingress of dirt (2.4.G.2)",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "208222094115",
+      "completedDate": "2014-07-11T14:35:33.000Z",
+      "expiryDate": "2015-08-05",
+      "odometerValue": "64798",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "208449584198",
+      "completedDate": "2014-07-08T11:22:02.000Z",
+      "expiryDate": null,
+      "odometerValue": "64718",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "FAILED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Headlamp aim beam image obviously incorrect (1.8.A.1b)",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Headlamp aim too low (1.8)",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Tyre tread depth below requirements of 1.6mm (4.1.E.1)",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Nearside Front Tyre tread depth below requirements of 1.6mm (4.1.E.1)",
+          "type": "FAIL"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "455687613203",
+      "completedDate": "2013-08-05T12:40:21.000Z",
+      "expiryDate": "2014-08-05",
+      "odometerValue": "57465",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Front Brake pad(s) wearing thin (3.5.1g)",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "387169912279",
+      "completedDate": "2012-08-06T14:08:42.000Z",
+      "expiryDate": "2013-08-05",
+      "odometerValue": "50834",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Offside Front Tyre worn close to the legal limit (4.1.E.1)",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "225907311233",
+      "completedDate": "2011-08-05T15:53:37.000Z",
+      "expiryDate": "2012-08-04",
+      "odometerValue": "43972",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "638358901272",
+      "completedDate": "2011-07-27T16:26:04.000Z",
+      "expiryDate": null,
+      "odometerValue": "43825",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "FAILED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Front Lower Suspension arm rubber bush deteriorated resulting in excessive movement (2.4.G.2)",
+          "type": "FAIL"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Lower Suspension arm rubber bush deteriorated resulting in excessive movement (2.4.G.2)",
+          "type": "FAIL"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "671968480157",
+      "completedDate": "2010-07-07T12:37:36.000Z",
+      "expiryDate": "2011-07-29",
+      "odometerValue": "36636",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Offside Front constant velocity joint gaiter deteriorated (2.5.C.1a)",
+          "type": "ADVISORY"
+        }
+      ]
+    },
+    {
+      "motTestNumber": "561621719279",
+      "completedDate": "2009-07-30T10:33:20.000Z",
+      "expiryDate": "2010-07-29",
+      "odometerValue": "30609",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": []
+    },
+    {
+      "motTestNumber": "613877008246",
+      "completedDate": "2008-07-25T16:04:20.000Z",
+      "expiryDate": "2009-07-24",
+      "odometerValue": "23705",
+      "odometerUnit": "MI",
+      "odometerResultType": "READ",
+      "testResult": "PASSED",
+      "dataSource": "DVSA",
+      "defects": [
+        {
+          "dangerous": false,
+          "text": "Nearside Front Tyre worn close to the legal limit (4.1.E.1)",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Offside Front Tyre worn close to the legal limit (4.1.E.1)",
+          "type": "ADVISORY"
+        },
+        {
+          "dangerous": false,
+          "text": "Advise replacement of both front tyres.",
+          "type": "USER ENTERED"
+        }
+      ]
+    }
+  ]
+}
