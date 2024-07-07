@@ -1,11 +1,12 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import axios from 'axios';
 import getAccessTokenCall from '../src/authentication/auth';
 import StandardHeader from '../components/StandardHeader';
 import RegDisplayer from '../components/RegDisplayer';
 import { colours } from '../assets/SharedStyles';
+import Btn from '../components/Btn';
 
 const DefectsScreen = () => {
   const [motData, setMotData] = useState<any | null>(null);
@@ -16,6 +17,7 @@ const DefectsScreen = () => {
     data: any;
   };
   //const [accessToken, setAccessToken] = useState('');
+  const navigation = useNavigation();
 
   console.log('Registration Number: ', registrationNumber);
   const url = `https://api.check-mot.service.gov.uk/trade/vehicles/${registrationNumber}/defects`;
@@ -56,6 +58,10 @@ const DefectsScreen = () => {
 
   console.log('---->>>>>>>>>>>>>>>MOt Data: ', JSON.stringify(data));
  // console.log('------------------<<>>>>>>>>> NUM OF DEFECTS: ', motDefects)
+
+ const handleBtn = () => {
+    navigation.goBack();
+ }
   return (
     <ScrollView>
       <View>
@@ -69,7 +75,9 @@ const DefectsScreen = () => {
             <Text style={styles.text}>{motData?.motTests[0]?.defects.length == 1 ? 'Possible defect' : 'Possible defects'}</Text>
         </View>
 
-        <View style={styles.body}></View>
+        <View style={styles.body}>
+            <Btn title='Back' onPress={handleBtn}/>
+        </View>
       </View>
 
       {/* <View>
