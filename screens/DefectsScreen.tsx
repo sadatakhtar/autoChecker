@@ -5,11 +5,16 @@ import axios from 'axios';
 import getAccessTokenCall from '../src/authentication/auth';
 import StandardHeader from '../components/StandardHeader';
 import RegDisplayer from '../components/RegDisplayer';
+import { colours } from '../assets/SharedStyles';
 
 const DefectsScreen = () => {
-  //const [data, setData] = useState(null);
+  const [motData, setMotData] = useState<any | null>(null);
+  const [motDefects, setMotDefects] = useState<any | null>(null);
   const route = useRoute();
-  const {registrationNumber, data} = route.params as {registrationNumber: string, data: any};
+  const {registrationNumber, data} = route.params as {
+    registrationNumber: string;
+    data: any;
+  };
   //const [accessToken, setAccessToken] = useState('');
 
   console.log('Registration Number: ', registrationNumber);
@@ -17,7 +22,7 @@ const DefectsScreen = () => {
   const url2 = `https://history.mot.api.gov.uk/v1/trade/vehicles/registration/${registrationNumber}`;
   const url3 = `https://beta.check-mot.service.gov.uk//trade/vehicles/mot-tests?registration={${registrationNumber}}`;
 
-  let apiData;
+  //let apiData;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +30,7 @@ const DefectsScreen = () => {
         //const token = await getAccessTokenCall();
         //setAccessToken(token);
         const token =
-          'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1HTHFqOThWTkxvWGFGZnBKQ0JwZ0I0SmFLcyIsImtpZCI6Ik1HTHFqOThWTkxvWGFGZnBKQ0JwZ0I0SmFLcyJ9.eyJhdWQiOiJodHRwczovL3RhcGkuZHZzYS5nb3YudWsiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9hNDU1YjgyNy0yNDRmLTRjOTctYjViNC1jZTVkMTNiNGQwMGMvIiwiaWF0IjoxNzIwMzc3ODkzLCJuYmYiOjE3MjAzNzc4OTMsImV4cCI6MTcyMDM4MTc5MywiYWlvIjoiRTJkZ1lLZ0xyM1hWTzcxcTZqT21mWGI3d2xObkF3QT0iLCJhcHBpZCI6IjAzZTgyMjY4LTQ2Y2YtNDBkZC05ODM4LTQ1OTc2NWUxNTg1MCIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2E0NTViODI3LTI0NGYtNGM5Ny1iNWI0LWNlNWQxM2I0ZDAwYy8iLCJvaWQiOiJlOTVmNWEzNC1iNGFhLTQ3MjMtYTU2MC0yZWY3NzgwMzA0NzkiLCJyaCI6IjAuQVVjQUo3aFZwRThrbDB5MXRNNWRFN1RRREZSR2EtSU5mSTFKbTNjbFJzczdYeGhIQUFBLiIsInJvbGVzIjpbInRhcGkucHVibGljIl0sInN1YiI6ImU5NWY1YTM0LWI0YWEtNDcyMy1hNTYwLTJlZjc3ODAzMDQ3OSIsInRpZCI6ImE0NTViODI3LTI0NGYtNGM5Ny1iNWI0LWNlNWQxM2I0ZDAwYyIsInV0aSI6IlBrTVYyemRyRlVDT2drS0c5dW9pQUEiLCJ2ZXIiOiIxLjAifQ.T2IgwETlYSZnL2dnlxuBY9q2IdA9CAJt1pI8aDajaETvUlhVFl2vGgBP0PvzcMBl5dpr73Ncg6flffo9xk0gR7iU82QzvP_1BJ_iQvxAUWxNnYgUCgGWJKSV-9PtW7z4_yZfCCwmmxvCFLJ5LLc0oO0xRGcSqGEsG8YiXRsrmyfILwiEuvzyJWUOehj5QTXjXKr7F36yhOvg6W5QzoH0Dr59cV64XIEL7VGjec1SWLVRNeX5Rm2EqnUZh-DtwK-Ja9aCp9LFUIMCA2ctPXrOHRhlxh1Xig22Rw9TOUNgkEm1z_cxlRhEoLsQvHml3T6LWwGfozMTK_GXnDCalaXihQ';
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik1HTHFqOThWTkxvWGFGZnBKQ0JwZ0I0SmFLcyIsImtpZCI6Ik1HTHFqOThWTkxvWGFGZnBKQ0JwZ0I0SmFLcyJ9.eyJhdWQiOiJodHRwczovL3RhcGkuZHZzYS5nb3YudWsiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC9hNDU1YjgyNy0yNDRmLTRjOTctYjViNC1jZTVkMTNiNGQwMGMvIiwiaWF0IjoxNzIwMzgyMTQxLCJuYmYiOjE3MjAzODIxNDEsImV4cCI6MTcyMDM4NjA0MSwiYWlvIjoiRTJkZ1lLaW9PQkgrNmg5WG9rTDZKOWFkOHlNUEFnQT0iLCJhcHBpZCI6IjAzZTgyMjY4LTQ2Y2YtNDBkZC05ODM4LTQ1OTc2NWUxNTg1MCIsImFwcGlkYWNyIjoiMSIsImlkcCI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0L2E0NTViODI3LTI0NGYtNGM5Ny1iNWI0LWNlNWQxM2I0ZDAwYy8iLCJvaWQiOiJlOTVmNWEzNC1iNGFhLTQ3MjMtYTU2MC0yZWY3NzgwMzA0NzkiLCJyaCI6IjAuQVVjQUo3aFZwRThrbDB5MXRNNWRFN1RRREZSR2EtSU5mSTFKbTNjbFJzczdYeGhIQUFBLiIsInJvbGVzIjpbInRhcGkucHVibGljIl0sInN1YiI6ImU5NWY1YTM0LWI0YWEtNDcyMy1hNTYwLTJlZjc3ODAzMDQ3OSIsInRpZCI6ImE0NTViODI3LTI0NGYtNGM5Ny1iNWI0LWNlNWQxM2I0ZDAwYyIsInV0aSI6IjFDN1h4dGRSTWt1aFNoUzIySkVmQUEiLCJ2ZXIiOiIxLjAifQ.FLjGjk1T5S9r_2VMTJF9WCVJ_vHOqiXKXNSNh-S7x-cWZLPDnMJYBoslebmi4EFg2v3Dm2azXyqxbIIkesZT1YUOG3lczGuptoz5-WGWRKUAuonOV831ndVjw627UKVlfR0PUDuj6ers7aMntJSav6cUbqTuySNx6sJ_-Rp_Lb1RCbSp2-NocwNm0gvUhJHbu2zKKZmqzflYB8_oTmLmHQb5Ip26Z2AHFdfROD64zIX_rm74byRPIn4RwVix_5qHIzRsD6lk7dBkJPsIvQGGWeeyar6YVZMIHRez-UtFWJbPqkYpcBCx03WhZ8t4yWh0kzmkuNFU0Gi09jtNZsLcgA";
         console.log('Token ------------------>>>>>>>>>>>>>', token);
         // console.log(
         //   '-------->>>>>>>>>>>>>>> ACCESS TOKEN STATE: ',
@@ -39,7 +44,9 @@ const DefectsScreen = () => {
           },
         });
         console.log('DATA STATE: ', JSON.stringify(response?.data));
-        apiData = response.data;
+        //apiData = response.data;
+        setMotData(response?.data)
+        setMotDefects(response?.data?.motTests[0]?.defects.length ?? 0);
       } catch (error) {
         console.error('API Call Failed:', error);
       }
@@ -48,17 +55,21 @@ const DefectsScreen = () => {
   }, []);
 
   console.log('---->>>>>>>>>>>>>>>MOt Data: ', JSON.stringify(data));
+ // console.log('------------------<<>>>>>>>>> NUM OF DEFECTS: ', motDefects)
   return (
     <ScrollView>
       <View>
         <StandardHeader />
         <RegDisplayer data={data} />
 
-        <View style={styles.body}>
-            <View>
-                <Text>This vehicle has 0 defects</Text>
-            </View>
+        <View style={styles.defectWrapper}>
+          <Text style={styles.defextText}>{motDefects ?? 0}</Text>
         </View>
+        <View style={styles.defectSubheading}>
+            <Text style={styles.text}>{motData?.motTests[0]?.defects.length == 1 ? 'Possible defect' : 'Possible defects'}</Text>
+        </View>
+
+        <View style={styles.body}></View>
       </View>
 
       {/* <View>
@@ -75,19 +86,46 @@ const DefectsScreen = () => {
 export default DefectsScreen;
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    body: {
-        margin: 20,
-        padding: 10,
-        backgroundColor: '#ff0',
-        borderWidth: 2,
-        borderColor: '#000',
-        borderRadius: 6,
-    },
-    
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  body: {
+    margin: 20,
+    padding: 10,
+    backgroundColor: '#ff0',
+    borderWidth: 2,
+    borderColor: '#000',
+    borderRadius: 6,
+  },
+  defectWrapper: {
+    marginHorizontal: 150,
+    height: 80,
+    padding: 10,
+    backgroundColor: colours.$dark_red,
+    borderWidth: 1,
+    borderColor: colours.$black,
+    borderRadius: 60,
+  },
+  defextText: {
+    color: colours.$white,
+    fontSize: 30,
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingVertical: 5,
+    fontWeight: 'bold',
+  },
+  defectSubheading: {   
+    //textAlign: 'center',
+    // justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    color: colours.$black,
+  }
 });

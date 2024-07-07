@@ -11,6 +11,7 @@ export const colours = {
     $strong_blue: '#0000FF',
 
     $red: '#ff0000',
+    $dark_red: '#f6090d',
     $white: '#ffffff',
 
     $yellow: '#f2b60d',

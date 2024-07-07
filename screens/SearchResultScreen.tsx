@@ -68,11 +68,11 @@ const SearchResultScreen = ({}: SearchResultProps) => {
         </View>
       </View>
 
-      <View>
+      {/* <View>
         <Text style={{fontSize: 20, color: colours.$red}}>
           {JSON.stringify(data)}
         </Text>
-      </View>
+      </View> */}
       <View style={styles.btnWrapper}>
         <View>
           <Btn title="Back" onPress={handleBtn} style={{width: '220'}}/>
