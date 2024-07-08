@@ -21,11 +21,12 @@ const DetailsDisplayer = ({
       <Text style={styles.text}>{label}: </Text>
       <View style={styles.dataWrapper}>
         <Text style={[styles.text, styles.dataText, style]}>
+          {/* {icon && <Ionicons name='check' size={20} color="green" />} */}
           {!icon ? (
             data
           ) : (
-            <View>
-              <Ionicons name={icon} size={20} color="red" />
+            <View style={{ flex: 1, }}>
+              <Ionicons name='check' size={20} color="green" />
             </View>
           )}
         </Text>

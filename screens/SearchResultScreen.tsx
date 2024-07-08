@@ -48,7 +48,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
-            //icon={data?.taxStatus ? 'check' : 'times'}
+            icon='check'
           />
           <DetailsDisplayer data={data?.taxDueDate} label="Tax Due Date" />
           <DetailsDisplayer
@@ -59,6 +59,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
+            icon='check'
           />
           <DetailsDisplayer
             data={data?.motExpiryDate}

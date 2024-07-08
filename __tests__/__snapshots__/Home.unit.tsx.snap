@@ -30,6 +30,7 @@ exports[`Home screen Snapshot Test renders correctly 1`] = `
       <Text
         style={
           {
+            "color": "#1f1f1f",
             "fontSize": 30,
             "fontWeight": "bold",
           }
