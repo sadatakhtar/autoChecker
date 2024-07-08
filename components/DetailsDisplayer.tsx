@@ -19,15 +19,17 @@ const DetailsDisplayer = ({
   return (
     <View style={styles.detailsWrapper}>
       <Text style={styles.text}>{label}: </Text>
-      <Text style={[styles.text, style]}>
-        {!icon ? (
-          data
-        ) : (
-          <View>
-            <Ionicons name={icon} size={20} color="red" />
-          </View>
-        )}
-      </Text>
+      <View style={styles.dataWrapper}>
+        <Text style={[styles.text, styles.dataText, style]}>
+          {!icon ? (
+            data
+          ) : (
+            <View>
+              <Ionicons name={icon} size={20} color="red" />
+            </View>
+          )}
+        </Text>
+      </View>
     </View>
   );
 };
@@ -48,4 +50,18 @@ const styles = StyleSheet.create({
   iconStyle: {
     color: colours.$blue,
   },
+  dataWrapper: {
+    borderWidth: 1,
+    borderColor: colours.$black,
+    width: 150,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colours.$black,
+    borderRadius: 6,
+  }, 
+  dataText: {
+    color: colours.$white,
+    fontSize: 16,
+    fontWeight: 'bold',
+  }
 });
