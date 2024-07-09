@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import StandardHeader from '../components/StandardHeader';
-import Btn from '../components/Btn';
+import StandardHeader from '../../components/StandardHeader';
+import Btn from '../../components/Btn';
 import {useNavigation} from '@react-navigation/native';
-import Paragraph from '../components/Paragraph';
+import Paragraph from '../../components/Paragraph';
 
 interface HomeProps {}
 interface NavProps {

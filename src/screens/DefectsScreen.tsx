@@ -74,7 +74,7 @@ const DefectsScreen = () => {
         const token = await getAccessTokenCall();
         setAccessToken(token);
 
-        console.log('ACCESS TOKEN STATE: ',accessToken,);
+        console.log('>>>>>>>>>>>>>>>>>>>>ACCESS TOKEN STATE: ',accessToken,);
         const response = await axios.get(url2, {
           headers: {
             Authorization: `Bearer ${token}`,
