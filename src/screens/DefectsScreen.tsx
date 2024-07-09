@@ -7,6 +7,8 @@ import StandardHeader from '../components/StandardHeader';
 import RegDisplayer from '../components/RegDisplayer';
 import {colours} from '../../assets/SharedStyles';
 import Btn from '../components/Btn';
+import DetailsDisplayer from '../components/DetailsDisplayer';
+import SubHeading from '../components/SubHeading';
 
 const DefectsScreen = () => {
   const [motData, setMotData] = useState<any | null>(null);
@@ -114,8 +116,19 @@ const DefectsScreen = () => {
         </View>
 
         <View style={styles.body}>
-          <Btn title="Back" onPress={handleBtn} />
+          <SubHeading heading="Details"/>
+          <DetailsDisplayer data={motData?.motTests[0].odometerValue} label='Mileage' />
+          <DetailsDisplayer data={motData?.motTests.length} label='Previous Mots:' />
+          
         </View>
+
+        <View style={styles.body}>
+          <SubHeading heading="Breakdown of Defects"/>
+          <DetailsDisplayer data={motData?.motTests[0]?.defects.length} label='Defects' />
+          <DetailsDisplayer data={motData?.motTests[0]?.defects[0]?.text} label='Defect 1' />
+
+        </View>
+        <Btn title="Back" onPress={handleBtn} />
       </View>
     </ScrollView>
   );

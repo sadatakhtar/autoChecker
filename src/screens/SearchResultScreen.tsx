@@ -8,6 +8,7 @@ import {colours} from '../../assets/SharedStyles';
 import StandardHeader from '../components/StandardHeader';
 import DetailsDisplayer from '../components/DetailsDisplayer';
 import RegDisplayer from '../components/RegDisplayer';
+import SubHeading from '../components/SubHeading';
 
 interface SearchResultProps {}
 
@@ -34,9 +35,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
       <RegDisplayer data={data} />
 
       <View style={styles.body}>
-        <View style={styles.generalTitle}>
-          <Text style={styles.title}>General details</Text>
-        </View>
+         <SubHeading heading="General details"/>
         <View>
           <DetailsDisplayer data={data?.make} label="Make" />
           <DetailsDisplayer data={data?.colour} label="Color" />
@@ -99,17 +98,17 @@ const styles = StyleSheet.create({
     borderColor: colours.$black,
     borderRadius: 6,
   },
-  generalTitle: {
-    borderBottomWidth: 1,
-    borderBottomColor: colours.$black,
-    padding: 10,
-    marginBottom: 10,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: colours.$black,
-  },
+  // generalTitle: {
+  //   borderBottomWidth: 1,
+  //   borderBottomColor: colours.$black,
+  //   padding: 10,
+  //   marginBottom: 10,
+  // },
+  // title: {
+  //   fontSize: 20,
+  //   fontWeight: 'bold',
+  //   color: colours.$black,
+  // },
   btnWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
