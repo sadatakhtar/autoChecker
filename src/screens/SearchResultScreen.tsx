@@ -54,11 +54,11 @@ const SearchResultScreen = ({}: SearchResultProps) => {
             data={data?.motStatus}
             label="MOT"
             style={
-              data?.motStatus
+              data?.motStatus === 'Valid'
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
-            icon="check"
+            icon={data?.motStatus === 'Not valid' ? 'circle-with-cross' : 'check'}
           />
           <DetailsDisplayer
             data={data?.motExpiryDate}

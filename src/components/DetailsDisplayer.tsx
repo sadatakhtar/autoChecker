@@ -21,12 +21,17 @@ const DetailsDisplayer = ({
       <Text style={styles.text}>{label}: </Text>
       <View style={styles.dataWrapper}>
         <Text style={[styles.text, styles.dataText, style]}>
-          {/* {icon && <Ionicons name='check' size={20} color="green" />} */}
           {!icon ? (
             data
           ) : (
-            <View style={{ flex: 1, }}>
-              <Ionicons name='check' size={20} color="green" />
+            <View style={{flex: 1}}>
+              <Ionicons
+                name={icon}
+                size={20}
+                color={
+                  data === 'Not valid' ? colours.$red : colours.$bright_green
+                }
+              />
             </View>
           )}
         </Text>
@@ -59,10 +64,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colours.$black,
     borderRadius: 6,
-  }, 
+  },
   dataText: {
     color: colours.$white,
     fontSize: 16,
     fontWeight: 'bold',
-  }
+  },
 });

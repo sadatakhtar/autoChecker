@@ -125,6 +125,7 @@ const DefectsScreen = () => {
         <View style={styles.body}>
           <SubHeading heading="Breakdown of Defects"/>
           <DetailsDisplayer data={motData?.motTests[0]?.defects.length} label='Defects' />
+          {/* TODO: need to map through defects, below is just an example */}
           <DetailsDisplayer data={motData?.motTests[0]?.defects[0]?.text} label='Defect 1' />
 
         </View>
