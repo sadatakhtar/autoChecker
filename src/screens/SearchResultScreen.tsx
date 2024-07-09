@@ -1,10 +1,10 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import {getData} from '../src/features/general/generalSlice';
+import {getData} from '../features/general/generalSlice';
 import {useSelector} from 'react-redux';
 import Btn from '../components/Btn';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import {colours} from '../assets/SharedStyles';
+import {colours} from '../../assets/SharedStyles';
 import StandardHeader from '../components/StandardHeader';
 import DetailsDisplayer from '../components/DetailsDisplayer';
 import RegDisplayer from '../components/RegDisplayer';
@@ -48,7 +48,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
-            icon='check'
+            icon="check"
           />
           <DetailsDisplayer data={data?.taxDueDate} label="Tax Due Date" />
           <DetailsDisplayer
@@ -59,7 +59,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
-            icon='check'
+            icon="check"
           />
           <DetailsDisplayer
             data={data?.motExpiryDate}
@@ -76,10 +76,10 @@ const SearchResultScreen = ({}: SearchResultProps) => {
       </View> */}
       <View style={styles.btnWrapper}>
         <View>
-          <Btn title="Back" onPress={handleBtn} style={{width: '220'}}/>
+          <Btn title="Back" onPress={handleBtn} style={{width: '220'}} />
         </View>
         <View>
-          <Btn title="Defects" onPress={handleDefects} style={{width: '120'}}/>
+          <Btn title="Defects" onPress={handleDefects} style={{width: '120'}} />
         </View>
       </View>
     </ScrollView>
@@ -90,7 +90,7 @@ export default SearchResultScreen;
 
 const styles = StyleSheet.create({
   container: {},
- 
+
   body: {
     margin: 20,
     padding: 10,
@@ -113,5 +113,5 @@ const styles = StyleSheet.create({
   btnWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
-  }
+  },
 });

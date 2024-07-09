@@ -8,7 +8,5 @@ describe('Dashboard Component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-
-
   // Add more tests here as needed
 });

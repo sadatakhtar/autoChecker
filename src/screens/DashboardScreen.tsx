@@ -4,10 +4,10 @@ import {View, Text, TextInput, StyleSheet} from 'react-native';
 import Btn from '../components/Btn';
 import StandardHeader from '../components/StandardHeader';
 import {useNavigation} from '@react-navigation/native';
-import {colours} from '../assets/SharedStyles';
+import {colours} from '../../assets/SharedStyles';
 import Paragraph from '../components/Paragraph';
 import axios from 'axios';
-import {setData} from '../src/features/general/generalSlice';
+import {setData} from '../features/general/generalSlice';
 import {useDispatch} from 'react-redux';
 
 interface DashboardScreenProps {}
@@ -41,7 +41,6 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
       dispatch(setData(response.data));
       navigation.navigate('Search Result', {
         registrationNumber: vehicleRegistration,
-      
       });
     } catch (error) {
       console.error('API Call Failed:', error);

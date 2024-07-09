@@ -19,17 +19,17 @@ const RootNavigator = (props: Props) => {
         component={Home}
         options={{headerShown: false}}
       />
-       <Stack.Screen
+      <Stack.Screen
         name="Dashboard"
         component={DashboardScreen}
         options={{headerShown: false}}
       />
-         <Stack.Screen
+      <Stack.Screen
         name="Search Result"
         component={SearchResultScreen}
         options={{headerShown: false}}
       />
-         <Stack.Screen
+      <Stack.Screen
         name="Defects"
         component={DefectsScreen}
         options={{headerShown: false}}

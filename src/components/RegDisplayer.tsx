@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {colours} from '../assets/SharedStyles';
+import {colours} from '../../assets/SharedStyles';
 
 interface RegDisplayerProps {
   data: any;

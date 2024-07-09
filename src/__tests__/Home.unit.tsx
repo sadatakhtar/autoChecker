@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import React from 'react';
-import { render, screen } from '@testing-library/react-native';
+import {render, screen} from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
-import Home from '../screens/Home'; 
+import Home from '../screens/Home';
 
 jest.mock('@react-navigation/native', () => ({
   useNavigation: jest.fn(),
@@ -18,7 +18,6 @@ describe('Home screen Snapshot Test', () => {
 describe('Home Component Tests', () => {
   it('renders without crashing', () => {
     render(<Home />);
-    expect(screen).not.toBeNull(); 
+    expect(screen).not.toBeNull();
   });
-
 });

@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Entypo';
-import {colours} from '../assets/SharedStyles';
+import {colours} from '../../assets/SharedStyles';
 
 interface DetailsDisplayerProps {
   data: any;

@@ -4,7 +4,7 @@ import {store} from './src/app/store';
 import {Provider} from 'react-redux';
 import {SafeAreaView} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import RootNavigator from './navigation/RootNavigator';
+import RootNavigator from './src/navigation/RootNavigator';
 
 export function App(): React.JSX.Element {
   return (
