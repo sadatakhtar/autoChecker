@@ -9,6 +9,7 @@ import Paragraph from '../components/Paragraph';
 import axios from 'axios';
 import {setData} from '../features/general/generalSlice';
 import {useDispatch} from 'react-redux';
+import NewHeader from '../components/NewHeader';
 
 interface DashboardScreenProps {}
 
@@ -54,17 +55,18 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
   };
   return (
     <View style={styles.container}>
-      <StandardHeader />
-      <View style={styles.titleWrapper}>
-        <Text style={styles.title}>Dashboard</Text>
-      </View>
-      <View style={styles.inputWrapper}>
+      <NewHeader />
+
+      <View style={{paddingHorizontal: 10, marginTop: 30}}>
         <Paragraph
           summary="Simply enter the vehicle registration number, and let our powerful 
         algorithms do the rest. Within seconds, you'll receive a 
         comprehensive list of potential issues or current defects associated
         with the car you're interested in."
         />
+      </View>
+
+      <View style={styles.inputWrapper}>
         <Text style={styles.label}>Enter Vehicle Registration</Text>
         <TextInput
           style={styles.input}
@@ -88,7 +90,11 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
         </View>
       </View>
       <View style={styles.btnContainer}>
-        <Btn title="Back" onPress={handleBackBtn} />
+        <Btn
+          title="Back"
+          onPress={handleBackBtn}
+          style={{marginHorizontal: 20, width: 120}}
+        />
       </View>
     </View>
   );
@@ -99,7 +105,8 @@ export default DashboardScreen;
 // Add styles for the input
 const styles = StyleSheet.create({
   container: {
-    // Your existing styles
+    flex: 1,
+    backgroundColor: colours.$white
   },
   input: {
     height: 40,
@@ -107,13 +114,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
     borderRadius: 5,
+    backgroundColor: colours.$white,
   },
   btnContainer: {
     marginTop: 50,
   },
   inputWrapper: {
     borderWidth: 1,
-    borderColor: colours.$blue,
+    borderColor: colours.$white,
+    backgroundColor: colours.$black,
     margin: 20,
     padding: 20,
     borderRadius: 5,
@@ -122,14 +131,15 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   title: {
-    color: colours.$black,
+    color: colours.$white,
     fontSize: 24,
     fontWeight: 'bold',
   },
   label: {
     padding: 10,
-    color: colours.$black,
+    color: colours.$yellow,
     fontWeight: 'bold',
+    fontSize: 18,
   },
   btnWrapper: {
     flexDirection: 'row',

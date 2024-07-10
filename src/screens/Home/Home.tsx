@@ -4,6 +4,8 @@ import StandardHeader from '../../components/StandardHeader';
 import Btn from '../../components/Btn';
 import {useNavigation} from '@react-navigation/native';
 import Paragraph from '../../components/Paragraph';
+import { colours } from '../../../assets/SharedStyles';
+import NewHeader from '../../components/NewHeader';
 
 interface HomeProps {}
 interface NavProps {
@@ -19,7 +21,7 @@ const Home = ({}: HomeProps) => {
   };
   return (
     <View style={styles.container}>
-      <StandardHeader />
+      <NewHeader />
       <View style={styles.body}>
         <Paragraph
           summary="Welcome to AutoChecker, your ultimate companion for stress-free car
@@ -41,9 +43,9 @@ const Home = ({}: HomeProps) => {
         />
         <View>
           <Btn
-            title="Click to proceed"
+            title="Next"
             onPress={handleBtn}
-            style={{marginTop: 20}}
+            style={{marginTop: 20, width: 120}}
           />
         </View>
       </View>
@@ -56,10 +58,11 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //padding: 10,
+    backgroundColor: colours.$white
   },
   text: {
     fontSize: 18,
+    color: colours.$black
   },
   body: {
     padding: 10,

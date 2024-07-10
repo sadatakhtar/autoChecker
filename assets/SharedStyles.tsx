@@ -1,7 +1,9 @@
 
 export const colours = {
-    $black: '#1f1f1f',
+    $light_black: '#1f1f1f',
     $charcoal: '#323232',
+    $black: '#151616',
+    $grey: '#a9a9a9',
 
     $darkBlue: '#1f446d',
     $blue: '#0360a6',

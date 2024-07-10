@@ -1,5 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import { colours } from '../../assets/SharedStyles';
 
 type Props = {
   summary?: string;
@@ -17,7 +18,8 @@ export default Paragraph;
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 18,
+    fontSize: 20,
+    color: colours.$black
   },
   textWrapper: {
     padding: 10,

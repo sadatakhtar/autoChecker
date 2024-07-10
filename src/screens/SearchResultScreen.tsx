@@ -5,10 +5,10 @@ import {useSelector} from 'react-redux';
 import Btn from '../components/Btn';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import {colours} from '../../assets/SharedStyles';
-import StandardHeader from '../components/StandardHeader';
 import DetailsDisplayer from '../components/DetailsDisplayer';
 import RegDisplayer from '../components/RegDisplayer';
 import SubHeading from '../components/SubHeading';
+import NewHeader from '../components/NewHeader';
 
 interface SearchResultProps {}
 
@@ -31,7 +31,7 @@ const SearchResultScreen = ({}: SearchResultProps) => {
   };
   return (
     <ScrollView>
-      <StandardHeader />
+      <NewHeader />
       <RegDisplayer data={data} />
 
       <View style={styles.body}>
@@ -68,17 +68,12 @@ const SearchResultScreen = ({}: SearchResultProps) => {
         </View>
       </View>
 
-      {/* <View>
-        <Text style={{fontSize: 20, color: colours.$red}}>
-          {JSON.stringify(data)}
-        </Text>
-      </View> */}
       <View style={styles.btnWrapper}>
         <View>
-          <Btn title="Back" onPress={handleBtn} style={{width: '220'}} />
+          <Btn title="Back" onPress={handleBtn} style={{width: 120}} />
         </View>
         <View>
-          <Btn title="Defects" onPress={handleDefects} style={{width: '120'}} />
+          <Btn title="Defects" onPress={handleDefects} style={{width: 120}} />
         </View>
       </View>
     </ScrollView>
@@ -88,7 +83,10 @@ const SearchResultScreen = ({}: SearchResultProps) => {
 export default SearchResultScreen;
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    flex: 1,
+    backgroundColor: colours.$white,
+  },
 
   body: {
     margin: 20,
@@ -98,17 +96,7 @@ const styles = StyleSheet.create({
     borderColor: colours.$black,
     borderRadius: 6,
   },
-  // generalTitle: {
-  //   borderBottomWidth: 1,
-  //   borderBottomColor: colours.$black,
-  //   padding: 10,
-  //   marginBottom: 10,
-  // },
-  // title: {
-  //   fontSize: 20,
-  //   fontWeight: 'bold',
-  //   color: colours.$black,
-  // },
+ 
   btnWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',

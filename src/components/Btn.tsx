@@ -23,7 +23,7 @@ export default Btn;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colours.$pale_blue,
+    backgroundColor: colours.$yellow,
     padding: 10,
     margin: 10,
     borderRadius: 5,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   text: {
     color: colours.$black,
     fontSize: 20,
-    fontWeight: 'condensedBold',
+    fontWeight: 'bold',
   },
 
 });

@@ -9,6 +9,7 @@ import {colours} from '../../assets/SharedStyles';
 import Btn from '../components/Btn';
 import DetailsDisplayer from '../components/DetailsDisplayer';
 import SubHeading from '../components/SubHeading';
+import NewHeader from '../components/NewHeader';
 
 const DefectsScreen = () => {
   const [motData, setMotData] = useState<any | null>(null);
@@ -101,7 +102,7 @@ const DefectsScreen = () => {
   return (
     <ScrollView>
       <View>
-        <StandardHeader />
+        <NewHeader />
         <RegDisplayer data={data} />
 
         <View style={styles.defectWrapper}>
@@ -129,7 +130,7 @@ const DefectsScreen = () => {
           <DetailsDisplayer data={motData?.motTests[0]?.defects[0]?.text} label='Defect 1' />
 
         </View>
-        <Btn title="Back" onPress={handleBtn} />
+        <Btn title="Back" onPress={handleBtn} style={{ marginHorizontal: 20, width: 120}}/>
       </View>
     </ScrollView>
   );

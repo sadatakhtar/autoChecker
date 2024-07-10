@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 18,
   },
   iconStyle: {
     color: colours.$blue,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   dataText: {
     color: colours.$white,
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });
