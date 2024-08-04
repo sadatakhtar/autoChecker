@@ -41,13 +41,13 @@ const Home = ({}: HomeProps) => {
         confidence with AutoChecker. Start your journey towards a 
         worry-free car buying experience today!"
         />
-        <View>
+        {/* <View>
           <Btn
             title="Next"
             onPress={handleBtn}
             style={{marginTop: 20, width: 120}}
           />
-        </View>
+        </View> */}
       </View>
     </View>
   );

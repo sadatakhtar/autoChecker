@@ -18,14 +18,14 @@ export default RegDisplayer;
 
 const styles = StyleSheet.create({
   numberPlate: {
-    borderWidth: 4,
+    borderWidth: 2,
     borderColor: colours.$black,
     borderRadius: 6,
     backgroundColor: colours.$yellow,
     padding: 10,
     paddingVertical: 10,
-    margin: 20,
-    marginTop: 40,
+    marginHorizontal: 20,
+    //marginTop: 40,
     justifyContent: 'center',
     alignItems: 'center',
   },

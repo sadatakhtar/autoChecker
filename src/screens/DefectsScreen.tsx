@@ -10,6 +10,7 @@ import Btn from '../components/Btn';
 import DetailsDisplayer from '../components/DetailsDisplayer';
 import SubHeading from '../components/SubHeading';
 import NewHeader from '../components/NewHeader';
+import BreadCrumTitle from '../containers/BreadCrumTitle';
 
 const DefectsScreen = () => {
   const [motData, setMotData] = useState<any | null>(null);
@@ -45,6 +46,7 @@ const DefectsScreen = () => {
     },
     defectWrapper: {
       marginHorizontal: 150,
+      marginTop: 20,
       height: 80,
       padding: 10,
       backgroundColor: motDefects > 0 ? colours.$red : 'green',
@@ -103,6 +105,7 @@ const DefectsScreen = () => {
     <ScrollView>
       <View>
         <NewHeader />
+        <BreadCrumTitle label="Back" navigation={navigation} />
         <RegDisplayer data={data} />
 
         <View style={styles.defectWrapper}>
@@ -130,7 +133,7 @@ const DefectsScreen = () => {
           <DetailsDisplayer data={motData?.motTests[0]?.defects[0]?.text} label='Defect 1' />
 
         </View>
-        <Btn title="Back" onPress={handleBtn} style={{ marginHorizontal: 20, width: 120}}/>
+        {/* <Btn title="Back" onPress={handleBtn} style={{ marginHorizontal: 20, width: 120}}/> */}
       </View>
     </ScrollView>
   );

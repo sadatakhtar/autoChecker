@@ -9,6 +9,7 @@ import DetailsDisplayer from '../components/DetailsDisplayer';
 import RegDisplayer from '../components/RegDisplayer';
 import SubHeading from '../components/SubHeading';
 import NewHeader from '../components/NewHeader';
+import BreadCrumTitle from '../containers/BreadCrumTitle';
 
 interface SearchResultProps {}
 
@@ -32,10 +33,11 @@ const SearchResultScreen = ({}: SearchResultProps) => {
   return (
     <ScrollView>
       <NewHeader />
+      <BreadCrumTitle label="Back" navigation={navigation} />
       <RegDisplayer data={data} />
 
       <View style={styles.body}>
-         <SubHeading heading="General details"/>
+        <SubHeading heading="General details" />
         <View>
           <DetailsDisplayer data={data?.make} label="Make" />
           <DetailsDisplayer data={data?.colour} label="Color" />
@@ -58,7 +60,9 @@ const SearchResultScreen = ({}: SearchResultProps) => {
                 ? {color: colours.$light_green}
                 : {color: colours.$red}
             }
-            icon={data?.motStatus === 'Not valid' ? 'circle-with-cross' : 'check'}
+            icon={
+              data?.motStatus === 'Not valid' ? 'circle-with-cross' : 'check'
+            }
           />
           <DetailsDisplayer
             data={data?.motExpiryDate}
@@ -69,11 +73,11 @@ const SearchResultScreen = ({}: SearchResultProps) => {
       </View>
 
       <View style={styles.btnWrapper}>
+        {/* <View>
+          <Btn title="Back" onPress={handleBtn} style={{width: 155}} />
+        </View> */}
         <View>
-          <Btn title="Back" onPress={handleBtn} style={{width: 120}} />
-        </View>
-        <View>
-          <Btn title="Defects" onPress={handleDefects} style={{width: 120}} />
+          <Btn title="Defects" onPress={handleDefects} style={{width: 155, backgroundColor: 'red'}} textStyles={{color: 'white'}} />
         </View>
       </View>
     </ScrollView>
@@ -92,13 +96,14 @@ const styles = StyleSheet.create({
     margin: 20,
     padding: 10,
     backgroundColor: colours.$yellow,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: colours.$black,
     borderRadius: 6,
   },
- 
+
   btnWrapper: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    // flexDirection: 'row',
+    // justifyContent: 'space-evenly',
+    marginHorizontal: 10,
   },
 });

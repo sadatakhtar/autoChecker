@@ -4,15 +4,15 @@ import {colours} from '../../../assets/SharedStyles';
 import * as Animatable from 'react-native-animatable';
 
 interface SplashScreenProps {
-  navigation: any;
+  //navigation: undefined | any;
 }
 
-const SplashScreen = ({navigation}: SplashScreenProps) => {
-    useEffect(() => {
-      setTimeout(() => {
-        navigation.navigate('Home');
-      }, 3000);
-    }, []);
+const SplashScreen = ({}: SplashScreenProps) => {
+    // useEffect(() => {
+    //   setTimeout(() => {
+    //     navigation.navigate('Home');
+    //   }, 3000);
+    // }, []);
   return (
     <View style={styles.container}>
       <View style={styles.innerWrapper}>

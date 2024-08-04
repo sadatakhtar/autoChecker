@@ -1,6 +1,6 @@
 //import {REACT_APP_API_URL, REACT_APP_API_KEY} from '@env';
 import React, {useState} from 'react';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
+import {View, Text, TextInput, StyleSheet, ScrollView} from 'react-native';
 import Btn from '../components/Btn';
 import StandardHeader from '../components/StandardHeader';
 import {useNavigation} from '@react-navigation/native';
@@ -10,6 +10,7 @@ import axios from 'axios';
 import {setData} from '../features/general/generalSlice';
 import {useDispatch} from 'react-redux';
 import NewHeader from '../components/NewHeader';
+import BreadCrumTitle from '../containers/BreadCrumTitle';
 
 interface DashboardScreenProps {}
 
@@ -54,10 +55,10 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
     setVehicleRegistration('');
   };
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <NewHeader />
-
-      <View style={{paddingHorizontal: 10, marginTop: 30}}>
+      <BreadCrumTitle label="Home" navigation={navigation} />
+      <View style={{paddingHorizontal: 10, marginTop: 0}}>
         <Paragraph
           summary="Simply enter the vehicle registration number, and let our powerful 
         algorithms do the rest. Within seconds, you'll receive a 
@@ -89,14 +90,14 @@ const DashboardScreen = ({}: DashboardScreenProps) => {
           />
         </View>
       </View>
-      <View style={styles.btnContainer}>
+      {/* <View style={styles.btnContainer}>
         <Btn
           title="Back"
           onPress={handleBackBtn}
           style={{marginHorizontal: 20, width: 120}}
         />
-      </View>
-    </View>
+      </View> */}
+    </ScrollView>
   );
 };
 
