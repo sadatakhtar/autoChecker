@@ -12,6 +12,7 @@ import SubHeading from '../components/SubHeading';
 import NewHeader from '../components/NewHeader';
 import BreadCrumTitle from '../containers/BreadCrumTitle';
 
+
 const DefectsScreen = () => {
   const [motData, setMotData] = useState<any | null>(null);
   const [motDefects, setMotDefects] = useState<any | null>(null);
@@ -24,9 +25,9 @@ const DefectsScreen = () => {
   const navigation = useNavigation();
 
   console.log('Registration Number: ', registrationNumber);
-  const url = `https://api.check-mot.service.gov.uk/trade/vehicles/${registrationNumber}/defects`;
+  //const url = `https://api.check-mot.service.gov.uk/trade/vehicles/${registrationNumber}/defects`;
   const url2 = `https://history.mot.api.gov.uk/v1/trade/vehicles/registration/${registrationNumber}`;
-  const url3 = `https://beta.check-mot.service.gov.uk//trade/vehicles/mot-tests?registration={${registrationNumber}}`;
+ // const url3 = `https://beta.check-mot.service.gov.uk//trade/vehicles/mot-tests?registration={${registrationNumber}}`;
 
 
   const styles = StyleSheet.create({
@@ -52,7 +53,7 @@ const DefectsScreen = () => {
       backgroundColor: motDefects > 0 ? colours.$red : 'green',
       borderWidth: 1,
       borderColor: colours.$black,
-      borderRadius: 60,
+      borderRadius: 40,
     },
     defextText: {
       color: colours.$white,
@@ -128,9 +129,17 @@ const DefectsScreen = () => {
 
         <View style={styles.body}>
           <SubHeading heading="Breakdown of Defects"/>
-          <DetailsDisplayer data={motData?.motTests[0]?.defects.length} label='Defects' />
-          {/* TODO: need to map through defects, below is just an example */}
-          <DetailsDisplayer data={motData?.motTests[0]?.defects[0]?.text} label='Defect 1' />
+          <View>
+            {motData?.motTests[0]?.defects.map((defect: any, index: number) => (
+              <DetailsDisplayer
+                key={index}
+                data={defect.text}
+                label={`Defect ${index + 1}`}
+                label2={`${defect.type}`}
+              />
+            ))}
+          </View>
+    
 
         </View>
         {/* <Btn title="Back" onPress={handleBtn} style={{ marginHorizontal: 20, width: 120}}/> */}

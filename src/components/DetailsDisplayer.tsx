@@ -6,6 +6,7 @@ import {colours} from '../../assets/SharedStyles';
 interface DetailsDisplayerProps {
   data: any;
   label: string;
+  label2?: string;
   style?: any;
   icon?: string;
 }
@@ -15,10 +16,15 @@ const DetailsDisplayer = ({
   label,
   style,
   icon,
+  label2,
 }: DetailsDisplayerProps) => {
   return (
     <View style={styles.detailsWrapper}>
-      <Text style={styles.text}>{label}: </Text>
+      <View style={{ flexDirection: 'column'}}>
+        <Text style={styles.text}>{label}: </Text>
+        {label2 && <Text style={styles.text}>Type: {label2}</Text>}
+      </View>
+
       <View style={styles.dataWrapper}>
         <Text style={[styles.text, styles.dataText, style]}>
           {!icon ? (
@@ -48,6 +54,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 10,
     paddingHorizontal: 10,
+    paddingVertical: 5,
   },
   text: {
     fontWeight: 'bold',
