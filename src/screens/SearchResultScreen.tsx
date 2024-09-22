@@ -11,6 +11,7 @@ import SubHeading from '../components/SubHeading';
 import NewHeader from '../components/NewHeader';
 import BreadCrumTitle from '../containers/BreadCrumTitle';
 
+
 interface SearchResultProps {}
 
 const SearchResultScreen = ({}: SearchResultProps) => {
@@ -73,11 +74,10 @@ const SearchResultScreen = ({}: SearchResultProps) => {
       </View>
 
       <View style={styles.btnWrapper}>
-        {/* <View>
-          <Btn title="Back" onPress={handleBtn} style={{width: 155}} />
-        </View> */}
-        <View>
-          <Btn title="Defects" onPress={handleDefects} style={{width: 155, backgroundColor: 'red'}} textStyles={{color: 'white'}} />
+        <View style={styles.innerBtnWrapper}>
+          
+          <Btn title="Defects" onPress={handleDefects} style={{width: 157, backgroundColor: 'black'}} textStyles={{color: 'white'}} />
+          <Btn title="Continue" onPress={handleDefects} style={{width: 157, backgroundColor: 'black'}} textStyles={{color: 'white'}} />
         </View>
       </View>
     </ScrollView>
@@ -102,8 +102,13 @@ const styles = StyleSheet.create({
   },
 
   btnWrapper: {
-    // flexDirection: 'row',
-    // justifyContent: 'space-evenly',
     marginHorizontal: 10,
   },
+
+  innerBtnWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 10,
+    marginBottom: 20,
+  }
 });

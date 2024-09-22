@@ -1,7 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import StandardHeader from '../../components/StandardHeader';
-import Btn from '../../components/Btn';
+import {StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import Paragraph from '../../components/Paragraph';
 import { colours } from '../../../assets/SharedStyles';
@@ -15,10 +13,6 @@ interface NavProps {
 const Home = ({}: HomeProps) => {
   const navigation: NavProps = useNavigation();
 
-  const handleBtn = () => {
-    console.log('btn pressed');
-    navigation.navigate('Dashboard');
-  };
   return (
     <View style={styles.container}>
       <NewHeader />
@@ -41,13 +35,6 @@ const Home = ({}: HomeProps) => {
         confidence with AutoChecker. Start your journey towards a 
         worry-free car buying experience today!"
         />
-        {/* <View>
-          <Btn
-            title="Next"
-            onPress={handleBtn}
-            style={{marginTop: 20, width: 120}}
-          />
-        </View> */}
       </View>
     </View>
   );
